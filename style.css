@@ -23,8 +23,21 @@ body {
 .header-top {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: space-between; /* Pushes items to ends */
     margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.github-link {
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+    transform: scale(1.1);
 }
 
 .university-title {
@@ -155,4 +168,58 @@ body {
     padding-left: 10px;
     background-color: #f9f9f9;
     border-radius: 4px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        max-height: 70px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .university-title {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .university-title h2 {
+        font-size: 1.4rem;
+    }
+
+    .university-title h3 {
+        font-size: 1rem;
+    }
+
+    .github-link {
+        margin-top: 10px;
+    }
+
+    .header-bottom h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-bottom p {
+        font-size: 1rem;
+    }
+
+    .col-md-5 {
+        width: 100%;
+    }
 }

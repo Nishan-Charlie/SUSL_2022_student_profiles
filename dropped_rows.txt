@@ -1,0 +1,9 @@
+Registration Number                                Full Name Department Github Profile Name                            Github Profile Landing page URL                                               Portfolio URL
+          22CSE0352        Kalavila Pathirage Nirmal Chamara         SE      Nirmal-Chamara                          https://github.com/Nirmal-Chamara            https://github.com/Nirmal-Chamara/Nirmal-Chamara
+          22CSE0392                  Keshomigha Anithsajeeve         SE          Keshomigha                              https://github.com/Keshomigha                               https://github.com/Keshomigha
+          22CSE0393                  Mangaleswaran Pavithar          SE           PavitharM                               https://github.com/PavitharM                                https://github.com/PavitharM
+         22CSE0401               Vivekanantharaja Kathirsan          SE          Kathirsan  https://github.com/Kathirsan/Kathirsan/edit/main/README.md  https://github.com/Kathirsan/Kathirsan/edit/main/README.md
+          22FIS0584                  Selvaventhan Rishikesan         IS        Rishikesan05                            https://github.com/Rishikesan05                           https://portfolio.rishikesan.tech
+          22CDS0411            Panawennage Sandeepa Madushan         DS   Sandeepa Madushan                     https://github.com/sandeepamadushan074 https://sandeepamadushan074.github.io/sandeepamadushan074/ 
+          22FIS0585                         Mayoori Ekanthan         IS    Mayoori Ekanthan                         https://github.com/MayooriEkanthan          https://github.com/MayooriEkanthan/MayooriEkanthan
+          22FIS0511 Walabaddalage Eshan Hasitha Senevirathna         IS        eshanhasitha                            https://github.com/eshanhasitha         https://eshanhasitha.github.io/react-portfolio-web/

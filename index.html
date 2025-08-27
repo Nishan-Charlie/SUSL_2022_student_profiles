@@ -38,6 +38,7 @@
         <div id="error-message"></div>
         <div class="row justify-content-center mb-4">
             <div class="col-md-5">
+                <input type="text" id="searchBar" class="form-control form-control-lg mb-3" placeholder="Search by Name or Reg No...">
                 <select id="deptSelect" class="form-select form-select-lg">
                     <option value="">Filter by Department</option>
                     <option value="CIS">Computer Information Systems (CIS)</option>
@@ -104,17 +105,31 @@
         }
 
         // Function to render cards
-        function renderCards(students, filterDept = '') {
+        function renderCards(students, filterDept = '', searchTerm = '') {
             const container = document.getElementById('cards');
             container.innerHTML = '';
-            const filtered = filterDept ? students.filter(s => s['Department'] === filterDept) : students;
 
-            if (filtered.length === 0) {
-                container.innerHTML = `<p class="text-center text-muted">No students found for the selected department.</p>`;
+            let filteredStudents = students;
+
+            if (filterDept) {
+                filteredStudents = filteredStudents.filter(s => s['Department'] === filterDept);
+            }
+
+            if (searchTerm) {
+                const lowerCaseSearchTerm = searchTerm.toLowerCase();
+                filteredStudents = filteredStudents.filter(s => {
+                    const nameMatch = s['Full Name'].toLowerCase().includes(lowerCaseSearchTerm);
+                    const regNoMatch = s['Registration Number'].toLowerCase().includes(lowerCaseSearchTerm);
+                    return nameMatch || regNoMatch;
+                });
+            }
+
+            if (filteredStudents.length === 0) {
+                container.innerHTML = `<p class="text-center text-muted">No students found.</p>`;
                 return;
             }
 
-            filtered.forEach(s => {
+            filteredStudents.forEach(s => {
                 const username = getUsernameFromUrl(s['Github Profile Landing page URL']);
                 if (!username) return; // Skip invalid URLs
 
@@ -172,9 +187,16 @@
                     }
 
                     const deptSelect = document.getElementById('deptSelect');
-                    deptSelect.addEventListener('change', debounce((e) => {
-                        renderCards(students, e.target.value);
-                    }, 250));
+                    const searchBar = document.getElementById('searchBar');
+
+                    const updateCards = () => {
+                        const dept = deptSelect.value;
+                        const searchTerm = searchBar.value;
+                        renderCards(students, dept, searchTerm);
+                    };
+
+                    deptSelect.addEventListener('change', debounce(updateCards, 250));
+                    searchBar.addEventListener('input', debounce(updateCards, 250));
 
                     // Initial render
                     renderCards(students);

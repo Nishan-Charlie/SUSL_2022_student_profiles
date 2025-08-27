@@ -223,3 +223,14 @@ body {
         width: 100%;
     }
 }
+
+#searchBar {
+    border-radius: 8px;
+    box-shadow: none;
+    border-color: #ddd;
+}
+
+#searchBar:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 0 0.25rem rgba(110, 142, 251, 0.25);
+}

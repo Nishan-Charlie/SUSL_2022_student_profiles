@@ -21,9 +21,7 @@ This project is a web-based platform that allows students of the Faculty of Comp
 
 ## 📸 Screenshots
 
-*(To add a screenshot, replace the placeholder link with a direct link to your image. You can upload your screenshot to a service like Imgur or directly to your GitHub repository.)*
-
-![Screenshot of the application](https://i.imgur.com/your-screenshot-link.png)
+![Screenshot of the application](screenshot.png)
 
 ## 🚀 How to Use
 
